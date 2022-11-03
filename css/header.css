@@ -1,0 +1,100 @@
+.header{
+    height: 20vh;
+    width: 100vw;
+}
+.headerpart {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    color: white;
+    position: relative;
+    top: 20%;
+}
+.headerright ul{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    color: aliceblue;
+    overflow: hidden;
+    text-decoration: none;
+    z-index: 2;
+}
+.headerright::before{
+    bottom: -1.5rem;
+    content: "";
+    left: -1.5rem;
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+}
+.headerleft{
+    width: 15%;
+    height: 15%;
+}
+.item {
+    display: block;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    z-index: 2;
+    font-size: .9rem;
+    font-size: 25px;
+    margin-left: 45px;
+    color: white;
+}
+.menulink{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.toggle-button{
+    position: absolute;
+    top: 0.75rem;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.bar{
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (min-width: 1300px) {
+    .headerright{
+        margin-right: 3rem;
+    }
+    
+}
+@media(max-width:580px){
+.menulink{
+    font-size:.75rem;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    display: flex;
+}
+.toggle-button{
+    display: flex;
+}
+.headerright{
+    display: none;
+}
+.headerright{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.headerright ul{
+  flex-direction: column;
+  width: 100%;
+  margin: 5rem;
+}
+.headerright li{
+text-align: center;
+}
+.headerright.active{
+    display: flex;
+}
+}
